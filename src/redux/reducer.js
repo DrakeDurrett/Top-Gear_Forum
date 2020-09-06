@@ -6,7 +6,7 @@ const initialState = {
 
 const USER_INFO_TO_REDUX = 'USER_INFO_TO_REDUX';
 
-export function userInfoToRedux(user_id, username, email ) {
+export function userInfoToRedux( user_id, username,  email ) {
     return {
         type: "USER_INFO_TO_REDUX",
         payload: { user_id, username, email }

@@ -1,5 +1,4 @@
 INSERT INTO posts
-(title, post)
+(user_id, title, content)
 VALUES
-($1, $2)
-RETURNING *;
+($1, $2, $3);

@@ -2,7 +2,9 @@ require('dotenv').config();
 const express = require('express');
 const massive = require('massive');
 const session = require('express-session');
-const authCtrl = require('./authController');
+const authCtrl = require('./controller/authController');
+const carCtrl = require('./controller/carsController');
+const postsCtrl = require('./controller/postsController');
 const app = express();
 
 const { CONNECTION_STRING, SERVER_PORT, SESSION_SECRET } = process.env;
@@ -11,16 +13,22 @@ app.use(express.json());
 app.use(session({
     resave: false,
     saveUninitialized: true,
-    cookie: {maxAge: 1000 * 60 * 60 * 72},
+    cookie: {maxAge: 1000 * 60 * 60 * 7},
     secret: SESSION_SECRET
 }))
 
 // Auth Endpoints
 app.post('/auth/register', authCtrl.register);
 app.post('/auth/login', authCtrl.login);
+app.put('/auth/user')
+app.delete('/auth/logout', authCtrl.logout);
 
 // Post endpoints
+app.get('/api/posts', postsCtrl.getPosts);
+app.post('/api/post/:user_id', postsCtrl.addPost);
 
+// Car Endpoints
+app.get('/api/cars', carCtrl.getCars);
 
 
 massive({

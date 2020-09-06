@@ -4,8 +4,8 @@ import { connect } from 'react-redux';
 
 class Nav extends Component {
     render() {
+        console.log(this.props)
         return <div>
-            <h1>{this.props.username}</h1>
             <Link to='/addpost'> Add Post </Link>
             <Link to='/cars'> Cars </Link>
             <Link to='/stig'> The Stig </Link>

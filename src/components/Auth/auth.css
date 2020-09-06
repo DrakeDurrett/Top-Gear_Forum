@@ -1,0 +1,10 @@
+.auth {
+    position: relative;
+    height: 40vh;
+    width: 30vw;
+    margin: 0 auto;
+    background-color: black;
+    top: 25vh;
+    padding-top: 10vh;
+}
+

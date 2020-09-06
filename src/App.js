@@ -1,18 +1,18 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Header from './components/Header/Header';
 import Nav from './components/Nav/Nav';
 import routes from './routes';
-import './App.css';
+import { withRouter } from 'react-router-dom';
 import './reset.css'
 
-function App() {
-  return (
-    <div>
-    <Header />
-    <Nav />
-    {routes}
+class App extends Component {
+  render(){
+    return <div>
+      {this.props.location.pathname === '/' ? <div /> : <Header />}
+      {this.props.location.pathname === '/' ? <div /> : <Nav />}
+      {routes}
     </div>
-  );
+  }
 }
 
-export default App;
+export default withRouter(App);
