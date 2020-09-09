@@ -21,9 +21,9 @@ CREATE TABLE comments (
 
 CREATE TABLE cars(
     car_id SERIAL PRIMARY KEY,
-    car_name VARCHAR(200),
+    name VARCHAR(100),
     lap_time VARCHAR(15),
-    car_picture TEXT
+    image TEXT
 );
 
 

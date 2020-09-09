@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+.posts {
+    position: relative;
+    width: 500px;
+    left: 17%;
+    top: -100px;
+}
+
+.post-box {
+    position: relative;
+    min-height: 200px;
+    top: -100px;
+    left: 150px;
+    width: 1000px;
+    overflow: hidden;
+    background-color: white;
+    margin-top: 20px;
+    opacity: 0.5;
+    border-radius: 10px;
+    padding: 15px;
+    padding-bottom: 30px;
+    font-family: 'Anton', sans-serif;
+    border: #1d7e9c 5px solid;
+    box-shadow: 5px 3px;
+}
+
+.post_title {
+    width: 50px;
+    height:  25px;
+    border-bottom: 5px solid #1d7e9c;
+}
+
+.post-title h1 {
+    font-size: 30px;
+}
+
+#title {
+    padding-top: 5px;
+    font-size: 13px;
+}
+
+.post-content {
+    padding: 25px 10px 5px 10px;
+    font-size: 20px;
+}
+
+
+
+
+
+/* @ media (max-width: 768px){
+
+} */

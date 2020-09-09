@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+/* font-family: 'Anton', sans-serif;
+#1d7e9c */
+
+.table-title{
+    position: relative;
+    font-family: 'Anton', sans-serif;
+    color: #1d7e9c;
+    left: 650px;
+    top: -240px;
+    font-size: 40px;
+}
+
+.car-table {
+    display: flex;
+    position: relative;
+    justify-content: space-evenly;
+    align-items: center;
+    left: 275px;
+    top: -230px;
+    width: 1000px;
+    height: 300px;
+    font-family: 'Anton', sans-serif;
+    color: #1d7e9c;
+    border: 2px solid black;
+    box-shadow: 2px 3px black;
+    margin-top: 10px;
+}
+
+.car-img img{
+    height: 200px;
+    width: 350px;
+}

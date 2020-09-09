@@ -8,13 +8,11 @@ import store from './redux/store';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <React.StrictMode>
     <Provider store={store}>
       <HashRouter>
         <App />
       </HashRouter>
-    </Provider>
-  </React.StrictMode>,
+    </Provider>,
   document.getElementById('root')
 );
 

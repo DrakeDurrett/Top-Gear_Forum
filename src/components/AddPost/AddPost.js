@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { connect } from 'react-redux';
+import './AddPost.css';
 
 
 class AddPost extends Component {
@@ -8,6 +9,7 @@ class AddPost extends Component {
         super();
 
         this.state = {
+            post_id: null,
             title: '',
             content: ''
         };
@@ -24,17 +26,17 @@ class AddPost extends Component {
 
     submitPost = () => {
         const { user_id } = this.props;
-        const { title, content } = this.state;
+        const {title, content } = this.state;
         axios.post(`/api/post/${user_id}`, {title, content}).then(res => {
-            this.props.history.push('/dashboard')
+            this.props.history.push('/dashboard');
         }).catch(err => console.log(err))
     };
 
     render() {
-        return <div>
-            <input type="text" name="title" value={this.state.title} onChange={this.handleInput} />
-            <input type="text" name="content" value={this.state.content} onChange={this.handleInput} />
-            <button onClick={() => this.submitPost()}> Post </button>
+        return <div className="add-post">
+            <input className="title-input" type="text" name="title" placeholder="Title..." value={this.state.title} onChange={this.handleInput} />
+            <textarea className="content-input" type="text" name="content" placeholder="Add your post here...." value={this.state.content} onChange={this.handleInput} />
+            <button id="submit-post" onClick={() => this.submitPost()}> Submit Post </button>
         </div>
     }
 }

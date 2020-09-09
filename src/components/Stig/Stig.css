@@ -1,0 +1,11 @@
+#stig-one {
+    position: relative;
+    left: 1650px;
+    top: -250px;
+}
+
+
+#stig-one:hover {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }

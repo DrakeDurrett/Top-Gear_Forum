@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import { connect } from 'react-redux';
-import {userInfoToRedux} from '../../redux/reducer';
+import {userInfoToRedux} from '../../redux/userReducer';
 import './auth.css'
 
 class Auth extends Component {
@@ -57,26 +57,32 @@ class Auth extends Component {
     render(){
         const { newUser } = this.state;
         return (
-        <div>
+        <div className="auth-page">
+            <img id="logo" src="https://occ-0-2794-2219.1.nflxso.net/dnm/api/v6/LmEnxtiAuzezXBjYXPuDgfZ4zZQ/AAAABTrTb2xjegtH7RDzb2RyX1HHXRmj-5tzQAcAlca0iMod-NfciRXLPEr5xqGhLmNtOTIX8LHWO3Ln8gagUUUtcvQb42Qa5ygwu4VA.png?r=172" alt="Top-gear" />
+            <h1 className='second-title'>FAN FORUM</h1>
             {newUser === true ? (
-                <div className="auth register">
+                <div className="auth">
                 <div className="register-inputs">
-                    <input type="text" placeholder="Email" name="email" value={this.state.email} onChange={this.handleInput} />
-                    <input type="text" placeholder="Username" name="username" value={this.state.username} onChange={this.handleInput}/>
-                    <input type="text" placeholder="Password" name="password" value={this.state.password} onChange={this.handleInput}/>
+                    <input className="register-inputs" type="text" placeholder="Email" name="email" value={this.state.email} onChange={e => this.handleInput(e)} />
+                    <input className="register-inputs" type="text" placeholder="Username" name="username" value={this.state.username} onChange={(e) => this.handleInput(e)}/>
+                    <input className="register-inputs" type="text" placeholder="Password" name="password" value={this.state.password} onChange={(e) => this.handleInput(e)}/>
                 </div>
                 <div className="register-buttons">
-                    <button onClick={this.toggleRegister}>Cancel</button>
-                    <button onClick={() => this.register()}>Register</button>
+                    <button lassName="register-buttons" onClick={this.toggleRegister}>Cancel</button>
+                    <button lassName="register-buttons" onClick={() => this.register()}>Register</button>
                 </div>
                     
             </div>)
         : (
-            <div className="auth login">
-                <input type="text" placeholder="Username" name="username" value={this.state.username} onChange={this.handleInput}/>
-                <input type="text" placeholder="Password" name="password" value={this.state.password} onChange={this.handleInput}/>
-                <button onClick={() => this.login()}>Login</button>
-                <button onClick={this.toggleRegister}>Register</button>
+            <div className="auth">
+                <div className="login-inputs">
+                    <input className="login-inputs" type="text" placeholder="Username" name="username" value={this.state.username} onChange={e => this.handleInput(e)}/>
+                    <input className="login-inputs" type="password" placeholder="Password" name="password" value={this.state.password} onChange={e => this.handleInput(e)}/>
+                </div>
+                <div className='login-buttons'>
+                    <button className='login-buttons' onClick={() => this.login()}>Login</button>
+                    <button className='login-buttons' onClick={this.toggleRegister}>Register</button>
+                </div>
             </div>
         )}
         </div>

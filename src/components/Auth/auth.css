@@ -1,10 +1,62 @@
-.auth {
-    position: relative;
-    height: 40vh;
-    width: 30vw;
-    margin: 0 auto;
-    background-color: black;
-    top: 25vh;
-    padding-top: 10vh;
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+body {
+    background-image: -webkit-radial-gradient(circle, white, black);
 }
 
+#logo{
+    position: relative;
+    height: 250px;
+    width: 500px;
+    left: 500px;
+    top: 50px;
+
+}
+
+.second-title {
+    position: relative;
+    left: 750px;
+    font-family: 'Anton', sans-serif;
+    font-size: 50px;
+    font-weight: 900;
+    color: black;
+}
+
+.auth {
+    position: relative;
+    width: 250px;
+    height: 200px;
+    margin: 0 auto;
+    top: -15px;
+    padding-top: 10vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-inputs {
+    width: 250px;
+    height: 30px;
+    margin-top: 10px;
+}
+
+.login-buttons {
+    position: relative;
+    top: 30px;
+    margin-left: 25px;
+}
+
+.register-inputs {
+    width: 250px;
+    height: 30px;
+    margin-top: 10px;
+}
+                    
+.register-buttons {
+    position: relative;
+    top: 100px;
+    margin-left: 10px;
+}
+
+.register-buttons button {
+    margin-left: 30px;
+}

@@ -13,19 +13,23 @@ app.use(express.json());
 app.use(session({
     resave: false,
     saveUninitialized: true,
-    cookie: {maxAge: 1000 * 60 * 60 * 7},
+    cookie: {maxAge: 1000 * 60 * 60 * 24 * 3},
     secret: SESSION_SECRET
 }))
 
 // Auth Endpoints
 app.post('/auth/register', authCtrl.register);
 app.post('/auth/login', authCtrl.login);
-app.put('/auth/user')
+app.put('/auth/user');
 app.delete('/auth/logout', authCtrl.logout);
 
 // Post endpoints
 app.get('/api/posts', postsCtrl.getPosts);
+app.get('/api/profile/:user_id', postsCtrl.getUsersPosts);
+app.get('/api/post/:post_id', postsCtrl.getPost);
 app.post('/api/post/:user_id', postsCtrl.addPost);
+app.put('/api/editPost/:post_id', postsCtrl.editPost);
+app.delete('/api/deletePost/:post_id', postsCtrl.deletePost);
 
 // Car Endpoints
 app.get('/api/cars', carCtrl.getCars);

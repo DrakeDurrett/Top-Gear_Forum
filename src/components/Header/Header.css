@@ -1,11 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
 .header {
     display: flex;
     justify-content: space-between;
-    height: 10vh;
-    width: 100vw;
+    height: 15vh;
+    width: 100%;
 }
 
-.header-nav{
-    display: flex;
-    justify-content: space-evenly;
+.header-logo img {
+    position: relative;
+    height: 150px;
+    width: 300px;
+    top: 10px;
+    left: 25px;
 }
+
+.header-logo h1 {
+    position: relative;
+    left: 12vw;
+    top: -25px;
+    font-family: 'Anton', sans-serif;
+    font-size: 25px;
+    color: #e5e5e5;
+}
+
+.welcome-tag {
+    position: relative;
+    top: 10vh;
+    left: -100px;
+    font-family: 'Anton', sans-serif;
+    font-size: 20px;
+    color: #e5e5e5;
+}
+
+.header-nav {
+    position: relative;
+    top: 4vh;
+    right: 3vw;
+    margin-left: 20px;
+    font-family: 'Anton', sans-serif;
+    font-size: 25px;
+}
+
+
+.header-nav a:visited{
+    color: #1d7e9c;
+}
+
+.header-nav a:hover {
+    color: white;
+}
+
