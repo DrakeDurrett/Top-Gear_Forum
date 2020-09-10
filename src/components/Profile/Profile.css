@@ -10,11 +10,12 @@
 .profile-post-box {
     position: relative;
     min-height: 200px;
-    top: -125px;
-    left: 150px;
-    width: 1000px;
+    top: 175px;
+    left: 75px;
+    width: 1200px;
     background-color: white;
     margin-top: 20px;
+    margin-bottom: 40px;
     opacity: 0.5;
     border-radius: 10px;
     padding: 15px;
@@ -40,7 +41,7 @@
 }
 
 #edit-btn {
-    height: 30px;
+    height: 40px;
     width: 100px;
     position: absolute;
     right: 70px;
@@ -54,8 +55,8 @@
 }
 
 #delete-btn {
-    height: 30px;
-    width: 30px;
+    height: 40px;
+    width: 40px;
     position: absolute;
     right: 25px;
     top: 15px;
@@ -67,3 +68,68 @@
     background-color: red;
 }
 
+.edit-title {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    padding-bottom: 5px;
+    height: 30px;
+    width: 200px;
+    position: relative;
+    left: 375px;
+    top: 25px;
+}
+
+.edit-content {
+    position: relative;
+    padding-left: 25px;
+    padding-bottom: 200px;
+    top: 40px;
+    left: 225px;
+    width: 500px;
+    height: 300px;
+}
+
+.submit-edit-btns {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Anton', sans-serif;
+    font-size: 20px;
+}
+
+.cancel-edit {
+    position: relative;
+    height: 50px;
+    width: 100px;
+    left: 60px;
+    bottom: 10px;
+    font-family: 'Anton', sans-serif;
+    font-size: 20px;
+}
+
+.submit-edit {
+    position: relative;
+    height: 50px;
+    width: 150px;
+    right: 40px;
+    bottom: 10px;
+    font-family: 'Anton', sans-serif;
+    font-size: 20px;
+}
+
+.submit-edit:hover {
+    background-color: #1d7e9c;
+}
+
+.cancel-edit:hover {
+    background-color: #1d7e9c;
+}
+
+.profile-post h2 {
+    position: relative;
+    top: 150px;
+    left: 575px;
+    font-family: 'Anton', sans-serif;
+    font-size: 50px;
+    color: #1d7e9c;
+}

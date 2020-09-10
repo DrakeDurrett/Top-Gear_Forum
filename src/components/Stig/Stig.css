@@ -1,11 +1,61 @@
 #stig-one {
-    position: relative;
-    left: 1650px;
-    top: -250px;
+    position: absolute;
+    right: 850px;
+    bottom: 100px;
 }
-
 
 #stig-one:hover {
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
-  }
+}
+
+.stig-display h2 {
+    position: absolute;
+    top: 250px;
+    left: 250px;
+    font-family: 'Anton', sans-serif;
+    color: #1d7e9c;
+    font-size: 50px;
+}
+
+.stig-facts {
+    position: relative;
+    top: 200px;
+    left: 150px;
+    height: 300px;
+    width: 600px;
+    font-family: 'Anton', sans-serif;
+
+}
+
+.stig-facts li {
+    margin-bottom: 80px;
+    font-size: 40px;
+}
+
+.stig-facts h1{
+    font-family: 'Anton', sans-serif;
+    font-size: 50px;
+    color: #1d7e9c;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.video-box {
+    position: absolute;
+    top: 250px;
+    right: 90px;
+}
+
+.video-box h1 {
+    margin-bottom: 25px;
+    font-family: 'Anton', sans-serif;
+    font-size: 50px;
+    color: #1d7e9c;
+    margin-left: 225px;
+}
+
+.videos {
+    margin-bottom: 50px;
+}
+

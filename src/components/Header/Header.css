@@ -16,20 +16,11 @@
 }
 
 .header-logo h1 {
-    position: relative;
-    left: 12vw;
-    top: -25px;
+    position: absolute;
+    left: 200px;
+    top: 125px;
     font-family: 'Anton', sans-serif;
     font-size: 25px;
-    color: #e5e5e5;
-}
-
-.welcome-tag {
-    position: relative;
-    top: 10vh;
-    left: -100px;
-    font-family: 'Anton', sans-serif;
-    font-size: 20px;
     color: #e5e5e5;
 }
 

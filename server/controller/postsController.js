@@ -12,7 +12,7 @@ module.exports = {
     },
     getUsersPosts: async (req, res) => {
         const db = req.app.get('db');
-        const { user_id } = req.params;
+        const {user_id} = req.session.user;
         const usersPosts = await db.get_users_posts(user_id);
         res.status(200).send(usersPosts);
     },
@@ -28,6 +28,7 @@ module.exports = {
         const { post_id } = req.params;
         const { title, content } = req.body;
         const post = await db.edit_post(title, content, post_id);
+        console.log(post)
         res.status(200).send(post);
     },
     deletePost: async (req, res) => {

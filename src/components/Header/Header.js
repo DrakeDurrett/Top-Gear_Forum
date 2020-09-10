@@ -20,7 +20,6 @@ class Header extends Component {
                 <img src="https://occ-0-2794-2219.1.nflxso.net/dnm/api/v6/LmEnxtiAuzezXBjYXPuDgfZ4zZQ/AAAABTrTb2xjegtH7RDzb2RyX1HHXRmj-5tzQAcAlca0iMod-NfciRXLPEr5xqGhLmNtOTIX8LHWO3Ln8gagUUUtcvQb42Qa5ygwu4VA.png?r=172" alt="top-gear"/> 
                 <h1>Fan Forum</h1>
             </div>
-            <p className="welcome-tag">Welcome, {this.props.username}!</p>
             <div className='header-nav'>
                 <Link to='/' onClick={() => this.logout()} className='header-nav'>Logout</Link>
             </div>

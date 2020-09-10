@@ -1,38 +1,32 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './Cars.css';
 
-class Cars extends Component {
-    constructor() {
-        super();
+const Cars = (props) => {
 
-        this.state = {
-            cars: []
-        };
+    const [cars, setUsersCars] = useState([]);
 
-    }
+    useEffect(() => {
+        getCars()
+    })
 
-    componentDidMount() {
-        this.getCars()
-    };
 
-    getCars = () => {
+    const getCars = () => {
         axios.get('/api/cars').then(res => {
-            this.setState({
-                cars: res.data
-            })
+            setUsersCars(res.data)
         }).catch(err => console.log(err))
     };
 
-    render() {
-        const mappedCars = this.state.cars.map( (cars) => {
-            return <div className="car-table" key={cars.car_id}>
-                <h1>#{cars.car_id}</h1>
+    const mappedCars = cars.map( (cars) => {
+        return <div className="car-table" key={cars.car_id}>
+                <span>
+                    <h1>#{cars.car_id}</h1>
+                </span>
                 <span className="car-name">
                     <h1>{cars.name}</h1>
                 </span>
                 <span className='car-img'>
-                    <img src={cars.image} alt="404 Not Found"></img>
+                     <img src={cars.image} alt="404 Not Found"></img>
                 </span>
                 <span className="car-lap">
                     <h2>{cars.lap_time}</h2>
@@ -43,7 +37,6 @@ class Cars extends Component {
             <h1 className="table-title">Power Lap Board</h1>
             {mappedCars}
         </div>
-    }
 }
 
 export default Cars;

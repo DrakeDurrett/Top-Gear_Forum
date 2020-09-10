@@ -39,7 +39,9 @@ class Dashboard extends Component {
                 </section>
             </div>
         })
-        return <div className="posts">
+        return <div>
+            <p className="welcome-tag">Welcome, {this.props.username}!</p>
+            <h1 className="forum-header">THE GREATEST FORUM....IN THE WORLD</h1>
             {mappedPosts}
         </div>
     }

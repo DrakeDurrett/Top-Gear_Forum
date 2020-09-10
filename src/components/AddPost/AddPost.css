@@ -6,7 +6,7 @@
     display: flex;
     flex-direction: column;
     left: 150px;
-    top: -250px;
+    top: 100px;
     width: 80vw;
     height: 60vh;
     font-family: 'Anton', sans-serif;
@@ -26,7 +26,7 @@
     position: relative;
     height: 50vh;
     width: 50vw;
-    left: 20%;
+    left: 350px;
     margin-bottom: 10px;
     padding-left: 25px;
     padding-top: 25px;

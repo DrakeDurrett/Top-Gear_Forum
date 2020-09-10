@@ -3,11 +3,11 @@
 #1d7e9c */
 
 .table-title{
-    position: relative;
+    position: absolute;
     font-family: 'Anton', sans-serif;
     color: #1d7e9c;
-    left: 650px;
-    top: -240px;
+    left: 825px;
+    top: 175px;
     font-size: 40px;
 }
 
@@ -16,15 +16,18 @@
     position: relative;
     justify-content: space-evenly;
     align-items: center;
-    left: 275px;
-    top: -230px;
-    width: 1000px;
+    align-content: space-evenly;
+    left: 200px;
+    top: 150px;
+    width: 1600px;
     height: 300px;
     font-family: 'Anton', sans-serif;
     color: #1d7e9c;
+    font-size: 40px;
     border: 2px solid black;
     box-shadow: 2px 3px black;
     margin-top: 10px;
+    margin-bottom: 40px;
 }
 
 .car-img img{

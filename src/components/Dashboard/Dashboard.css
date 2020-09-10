@@ -1,21 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
-.posts {
-    position: relative;
-    width: 500px;
-    left: 17%;
-    top: -100px;
-}
-
 .post-box {
     position: relative;
     min-height: 200px;
-    top: -100px;
-    left: 150px;
-    width: 1000px;
+    top: 80px;
+    left: 300px;
+    width: 1300px;
     overflow: hidden;
     background-color: white;
     margin-top: 20px;
+    margin-bottom: 50px;
     opacity: 0.5;
     border-radius: 10px;
     padding: 15px;
@@ -45,6 +39,23 @@
     font-size: 20px;
 }
 
+.welcome-tag {
+    position: absolute;
+    left: 850px;
+    top: 76px;
+    font-family: 'Anton', sans-serif;
+    font-size: 30px;
+    color: white;
+}
+
+.forum-header {
+    position: relative;
+    color: #1d7e9c;
+    top: 40px;
+    left: 575px;
+    font-family: 'Anton', sans-serif;
+    font-size: 50PX;
+}
 
 
 
