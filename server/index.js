@@ -3,10 +3,10 @@ const express = require('express');
 const massive = require('massive');
 const session = require('express-session');
 const aws = require('aws-sdk');
+const path = require('path');
 const authCtrl = require('./controller/authController');
 const carCtrl = require('./controller/carsController');
 const postsCtrl = require('./controller/postsController');
-// const path = require('path');
 const app = express();
 
 const { CONNECTION_STRING, SERVER_PORT, SESSION_SECRET, S3_BUCKET, AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY } = process.env;
