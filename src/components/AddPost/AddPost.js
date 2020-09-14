@@ -57,8 +57,7 @@ class AddPost extends Component {
                 this.setState({
                     isUploading: false,
                     img_url,
-                });
-                console.log(this.state.img_url);
+                })
                 }).catch((err) => {
                     this.setState({ isUploading: false });
                     console.log(err);
