@@ -1,6 +1,7 @@
 #stig-one {
-    position: absolute;
-    right: 850px;
+    position: relative;
+    top: 20vh;
+    left: 42vw;
     bottom: 100px;
 }
 
@@ -9,46 +10,50 @@
     transform: scaleX(-1);
 }
 
-.stig-display h2 {
-    position: absolute;
-    top: 250px;
-    left: 250px;
-    font-family: 'Anton', sans-serif;
-    color: #1d7e9c;
-    font-size: 50px;
-}
-
-.stig-facts {
+.stig-display {
     position: relative;
-    top: 200px;
-    left: 150px;
-    height: 300px;
-    width: 600px;
-    font-family: 'Anton', sans-serif;
-
+    left: 5vw;
+    width: 30vw;
+    height: 80vh;
 }
 
-.stig-facts li {
-    margin-bottom: 80px;
-    font-size: 40px;
-}
-
-.stig-facts h1{
+.stig-display .first-title {
+    position: relative;
+    top: -55vh;
+    left: 10vw;
     font-family: 'Anton', sans-serif;
-    font-size: 50px;
     color: #1d7e9c;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.stig-display li {
+    position: relative;
+    top: -50vh;
+    left: 3vw;
+    font-size: 30px;
+    font-family: 'Anton', sans-serif;
+    margin-bottom: 40px;
+}
+
+.stig-display .second-title {
+    position: relative;
+    width: 400px;
+    right: 47vw;
+    top: -400px;
+    color: #1d7e9c;
+    font-size: 50px;
+    font-family: 'Anton', sans-serif;
 }
 
 .video-box {
     position: absolute;
-    top: 250px;
-    right: 90px;
+    top: 290px;
+    right: 100px;
 }
 
 .video-box h1 {
-    margin-bottom: 25px;
+    margin-bottom: 60px;
     font-family: 'Anton', sans-serif;
     font-size: 50px;
     color: #1d7e9c;
@@ -57,5 +62,7 @@
 
 .videos {
     margin-bottom: 50px;
+    height: 20vh;
+    width: 40vw;
 }
 

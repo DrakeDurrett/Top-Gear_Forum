@@ -33,7 +33,7 @@ const Cars = (props) => {
                 </span>
             </div>
         })
-        return <div>
+        return <div className="power-lap-board">
             <h1 className="table-title">Power Lap Board</h1>
             {mappedCars}
         </div>

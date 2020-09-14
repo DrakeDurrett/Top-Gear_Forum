@@ -9,7 +9,8 @@ CREATE TABLE posts (
     post_id SERIAL PRIMARY KEY,
     user_id INT REFERENCES users(user_id),
     title VARCHAR(200),
-    post VARCHAR(500)
+    post VARCHAR(500),
+    img TEXT
 );
 
 CREATE TABLE comments (
@@ -30,11 +31,3 @@ CREATE TABLE cars(
 SELECT * FROM posts
 JOIN users ON users.user_id = posts.user_id;
 
-INSERT INTO posts
-(user_id, title, post)
-VALUES
-(1, 'Jeremy', 'Jeremy Clarkson is the best!!'),
-(1, 'Specials', 'I love every Top Gear special!'),
-(2, 'POWERR', 'Which car had the fastest lap time?'),
-(2, 'Bugatti', 'The bugatti blew my mind on this show!!'),
-(3, 'Hamster', 'Happy that Hammond was okay after his most recent crash!');

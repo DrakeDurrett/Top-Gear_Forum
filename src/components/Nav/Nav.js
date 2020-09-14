@@ -28,7 +28,7 @@ class Nav extends Component {
     render(){
         return <div>
             {!this.state.collapsed ? (
-                <nav className="collapsed-sidebar" onMouseOver={() => this.toggleMenu()} onMouseLeave={() => this.toggleMenu()}>
+                <nav className="collapsed-sidebar" onClick={() => this.toggleMenu()} >
                     <button className="open-menu">></button>
                     
             </nav>

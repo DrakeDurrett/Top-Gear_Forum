@@ -68,8 +68,8 @@ class Auth extends Component {
                     <input className="register-inputs" type="text" placeholder="Password" name="password" value={this.state.password} onChange={(e) => this.handleInput(e)}/>
                 </div>
                 <div className="register-buttons">
-                    <button className="register-buttons" onClick={this.toggleRegister}>Cancel</button>
-                    <button className="register-buttons" onClick={() => this.register()}>Register</button>
+                    <button onClick={this.toggleRegister}>Cancel</button>
+                    <button onClick={() => this.register()}>Register</button>
                 </div>
                     
             </div>)
@@ -80,8 +80,8 @@ class Auth extends Component {
                     <input className="login-inputs" type="password" placeholder="Password" name="password" value={this.state.password} onChange={e => this.handleInput(e)}/>
                 </div>
                 <div className='login-buttons'>
-                    <button className='login-buttons' onClick={() => this.login()}>Login</button>
-                    <button className='login-buttons' onClick={this.toggleRegister}>Register</button>
+                    <button onClick={() => this.login()}>Login</button>
+                    <button onClick={this.toggleRegister}>Register</button>
                 </div>
             </div>
         )}
