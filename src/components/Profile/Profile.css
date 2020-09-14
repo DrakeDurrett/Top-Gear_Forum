@@ -148,3 +148,9 @@
     font-size: 50px;
     color: #1d7e9c;
 }
+
+@media (max-width: 768px) {
+    .profile-post-box {
+        width: 80vw;
+    }
+}

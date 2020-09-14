@@ -31,7 +31,6 @@ flex-direction: column;
 
 .second-title {
     position: relative;
-    margin-left: 50vw;
     top: 15vh;
     margin-left: 50vw;
     font-family: 'Anton', sans-serif;
@@ -52,7 +51,7 @@ flex-direction: column;
     position: relative;
     width: 200px;
     top: 60px;
-    margin-left: 15px;
+    margin-left: 18px;
 }
 
 .login-buttons button {
@@ -110,11 +109,10 @@ flex-direction: column;
     }
 
     .second-title {
-        position: relative;
-        top: 25vh;
+        position: absolute;
+        top: 45vh;
         font-size: 20px;
-        margin-top: 25px;
-        margin-left: 400px;
+        margin-left: 55vw;
     }
 
     .login-inputs {

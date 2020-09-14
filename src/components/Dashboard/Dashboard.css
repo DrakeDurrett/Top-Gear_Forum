@@ -81,11 +81,14 @@
 
     .forum-header {
         font-size: 30px;
+        position: relative;
+        top: 25px;
     }
 
     .post-box {
         position: relative;
         left: 15vw;
+        top: 50px;
     }
 }
 

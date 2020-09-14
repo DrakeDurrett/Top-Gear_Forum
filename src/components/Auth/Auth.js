@@ -58,8 +58,10 @@ class Auth extends Component {
         const { newUser } = this.state;
         return (
         <div className="auth-page">
+            <div className="logo">
             <img id="logo" src="https://occ-0-2794-2219.1.nflxso.net/dnm/api/v6/LmEnxtiAuzezXBjYXPuDgfZ4zZQ/AAAABTrTb2xjegtH7RDzb2RyX1HHXRmj-5tzQAcAlca0iMod-NfciRXLPEr5xqGhLmNtOTIX8LHWO3Ln8gagUUUtcvQb42Qa5ygwu4VA.png?r=172" alt="Top-gear" />
             <h1 className='second-title'>FAN FORUM</h1>
+            </div>
             {newUser === true ? (
                 <div className="auth">
                 <div className="register-inputs">
