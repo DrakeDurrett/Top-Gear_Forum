@@ -71,10 +71,22 @@
 }
 
 
+@media (max-width: 768px){
+    .welcome-tag {
+        font-size: 15px;
+        position: absolute;
+        top: 9vh;
+        left: 50vw;
+    }
+
+    .forum-header {
+        font-size: 30px;
+    }
+
+    .post-box {
+        position: relative;
+        left: 15vw;
+    }
+}
 
 
-
-
-/* @ media (max-width: 768px){
-
-} */

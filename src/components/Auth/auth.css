@@ -100,3 +100,44 @@ flex-direction: column;
     background-color: white;
     cursor: pointer;
 }
+
+@media (max-width: 768px) {
+    #logo {
+        position: relative;
+        top: 30vh;
+        height: 150px;
+        width: 250px;
+    }
+
+    .second-title {
+        position: relative;
+        top: 25vh;
+        font-size: 20px;
+        margin-top: 25px;
+        margin-left: 400px;
+    }
+
+    .login-inputs {
+        width: 150px;
+    }
+
+    .login-buttons button{
+        position: relative;
+        left: -3vw;
+        width: 65px;
+        height: 30px;
+        font-size: 15px;
+    }
+
+    .register-inputs {
+        width: 150px;
+    }
+
+    .register-buttons button {
+        position: relative;
+        left: -2vw;
+        width: 65px;
+        height: 30px;
+        font-size: 15px;
+    }
+}

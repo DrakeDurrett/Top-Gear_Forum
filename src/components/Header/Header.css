@@ -42,3 +42,19 @@
     color: white;
 }
 
+@media (max-width: 768px) {
+    .header-logo img {
+        width: 200px;
+        height: 100px;
+    }
+
+    .header-logo h1 {
+        position: absolute;
+        top: 10vh;
+        left: 15vw;
+    }
+
+    .header-nav {
+        font-size: 20px;
+    }
+}

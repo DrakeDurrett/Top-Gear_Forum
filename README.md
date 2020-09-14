@@ -2,26 +2,19 @@
 
 ## The Top Gear Fan Forum is place for all the fans of the great british automotive tv program!! Users can post about their favorite moments of the show, post pictures of their favorite moments and comment on other users posts! Users will also be able to view all of the vehicles on the show as well as their lap times and their is a dedicated page to the tamed racing driver "The Stig".
 
+<br/>
 
-``` JAVASCRIPT
-CREATE TABLE users (
-    user_id SERIAL PRIMARY KEY,
-    email VARCHAR(200),
-    username VARCHAR(100),
-    password VARCHAR(200)
-);
+## Check out component tree and views layout on my [Figma Page](https://www.figma.com/file/MLjGxpe1R8hXDjIGJWuxy9/Personal-Project?node-id=0%3A1).
 
-CREATE TABLE posts (
-    post_id SERIAL PRIMARY KEY,
-    title VARCHAR(200),
-    post VARCHAR(500),
-    user_id INT REFERENCES users(user_id)
-)
+<br/>
 
-CREATE TABLE comments (
-    comment_id SERIAL PRIMARY KEY,
-    content VARCHAR(500),
-    user_id INT REFERENCES users(user_id),
-    post_id INT REFERENCES posts(post_id)
-);
-```
+## MVP 
+- A user can create a profile, log in and log out. When user logs in they will see all posts from the Fan Forum. 
+- A user will be able to create a post with a title and an image.
+- A user can then view the posts they have created on their profile page. 
+- A user can then edit or delete the posts they have created on their profile page.
+- Users will be able to view the fastest cars that ever went around the Top Gear Test Track on the Cars view.
+- Users also can view The Stig page to see fun facts and funny videos of the infamous tames racing driver.
+
+## Technologies 
+- React, Axios, Express, Bcrypt, Amazon S3, DOTENV, Massive, React-Redux.
