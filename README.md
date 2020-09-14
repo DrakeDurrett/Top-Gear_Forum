@@ -1,6 +1,6 @@
 # Top Gear Fan Forum 
 
-## The Top Gear Fan Forum is place for all the fans of the great british automotive tv program!! Users can post about their favorite moments of the show, post pictures of their favorite moments and comment on other users posts! Users will also be able to view all of the vehicles on the show as well as their lap times and their is a dedicated page to the tamed racing driver "The Stig".
+## The Top Gear Fan Forum is a place for all fans of the great british automotive tv program!! Users can post about their favorite moments of the show or post pictures of their favorite moments! Users will also be able to view all of the vehicles on the show as well as their lap times and their is a dedicated page to the tamed racing driver "The Stig".
 
 <br/>
 
