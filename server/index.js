@@ -41,7 +41,7 @@ app.get('/api/cars', carCtrl.getCars);
 app.get('/sign-s3', (req, res) => {
   
   aws.config = {
-    region: 'us-east-2',
+    region: 'us-east-1',
     accessKeyId: AWS_ACCESS_KEY_ID,
     secretAccessKey: AWS_SECRET_ACCESS_KEY
   }
@@ -90,5 +90,3 @@ massive({
 
 
 app.listen( SERVER_PORT, () => console.log(`Server listening on port: ${SERVER_PORT}`));
-
-
