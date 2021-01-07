@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import logo from './topgearlogo.jpg';
 import './Header.css';
 import axios from 'axios';
 
@@ -17,8 +18,7 @@ class Header extends Component {
     render(){
         return <div className='header'>
             <div className="header-logo">
-                <img src="https://occ-0-2794-2219.1.nflxso.net/dnm/api/v6/LmEnxtiAuzezXBjYXPuDgfZ4zZQ/AAAABTrTb2xjegtH7RDzb2RyX1HHXRmj-5tzQAcAlca0iMod-NfciRXLPEr5xqGhLmNtOTIX8LHWO3Ln8gagUUUtcvQb42Qa5ygwu4VA.png?r=172" alt="top-gear"/> 
-                <h1>Fan Forum</h1>
+                <Link to='/dashboard'><img src={logo} alt="top-gear"/> </Link>
             </div>
             <div className='header-nav'>
                 <Link to='/' onClick={() => this.logout()} className='header-nav'>Logout</Link>
