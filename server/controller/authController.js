@@ -17,7 +17,7 @@ module.exports = {
     login: async (req, res) => {
         const db = req.app.get('db');
         const { username, password } = req.body;
-        let existingUser = await db.get_user(username);
+        let existingUser = await db.get_user([username]);
         if(!existingUser[0]) {
             return res.status(404).send("Username not found")
         }

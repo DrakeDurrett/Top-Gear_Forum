@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import { connect } from 'react-redux';
 import {userInfoToRedux} from '../../redux/userReducer';
-import './Auth.scss'
+import logo from './topgearlogo.jpg';
+import './Auth.scss';
 
 class Auth extends Component {
     constructor(){
@@ -57,17 +58,16 @@ class Auth extends Component {
     render(){
         const { newUser } = this.state;
         return (
-        <div>
+        <div className="auth-page">
             <div className="logo">
-            <img src="/topgear.logo.jpg" alt="Top-gear" />
-            <h1>FAN FORUM</h1>
+            <img  id="logo" src={logo} alt="Top-gear" />
             </div>
             {newUser === true ? (
                 <div className="register">
                 <div className="register-inputs">
-                    <input className="register-inputs" type="text" placeholder="Email" name="email" value={this.state.email} onChange={e => this.handleInput(e)} />
-                    <input className="register-inputs" type="text" placeholder="Username" name="username" value={this.state.username} onChange={(e) => this.handleInput(e)}/>
-                    <input className="register-inputs" type="text" placeholder="Password" name="password" value={this.state.password} onChange={(e) => this.handleInput(e)}/>
+                    <input type="text" placeholder="Email" name="email" value={this.state.email} onChange={e => this.handleInput(e)} />
+                    <input type="text" placeholder="Username" name="username" value={this.state.username} onChange={(e) => this.handleInput(e)}/>
+                    <input type="text" placeholder="Password" name="password" value={this.state.password} onChange={(e) => this.handleInput(e)}/>
                 </div>
                 <div className="register-buttons">
                     <button onClick={this.toggleRegister}>Cancel</button>

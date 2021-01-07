@@ -1,159 +1,148 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
-body {
-    background-image: -webkit-radial-gradient(circle, white, black);
+.auth-page {
+    background: #111820;
 }
 
 .logo{
-    margin: 0 auto;
-    margin-top: 7%;
-    text-align: center;
- 
-    img {
-        height: 30%;
-        width: 40%;
-    }
+    width: 100%;
+    height: 30%;
 
-    h1 {
-        width: 50%;
-        position: relative;
-        left: 33%;
-        top: -50px;
-        font-family: 'Anton', sans-serif;
-        font-size: 50px;
-        font-weight: 900;
-        color: black;
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height: 700px;
+        width: 700px;
+        margin-bottom: -150px;
     }
 }
 
 .login {
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    height: 50vh;
+    height: 60%;
+    width: 100%;
 
     .login-inputs {
         display: flex;
         flex-direction: column;
         margin: 0 auto;
-        // height: 100%;
-        margin-top: 30px;
+        width: 100%;
+        height: 100%;
+        
 
         input {
-            margin-top: 15px;
-            height: 70px;
-            width: 350px;
+            display: block;
+            margin: 0 auto;
+            height: 75px;
+            width: 400px;
+            margin-top: 10px;
+            padding-left: 15px;
+            font-size: 20px;
+
         }
     }
 
     .login-buttons {
+        width: 20%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
         margin: 0 auto;
-        width: 100%;
+        margin-top: 25px;
 
         button {
+            display: block;
+            margin: 0 auto;
             text-align: center;
-            width: 200px;
-            height: 100px;
+            width: 150px;
+            height: 75px;
+            font-family: 'Anton', sans-serif;
+            background-color: #1d7e9c;
+            font-size: 20px;
+        }
+
+        button:hover {
+            background-color: white;
+            cursor: pointer;
         }
     }
 }
 
-.login-inputs {
-    width: 250px;
-    height: 30px;
-    margin-top: 10px;
-}
-
-.login-buttons {
+.register {
     display: flex;
-    position: relative;
-    width: 200px;
-    top: 60px;
-    margin-left: 18px;
+    flex-direction: column;
+    width: 100%;
+    height: 70%;
+
+    .register-inputs {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        input {
+            display: block;
+            margin: 0 auto;
+            height: 75px;
+            width: 400px;
+            margin-top: 10px;
+            padding-left: 15px;
+            font-size: 20px;
+        }
+    }
+
+    .register-buttons {
+        width: 20%;
+        margin: 0 auto;
+        margin-top: 25px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        button {
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+            width: 150px;
+            height: 75px;
+            font-family: 'Anton', sans-serif;
+            background-color: #1d7e9c;
+            font-size: 20px;
+        }
+
+        button:hover {
+            background-color: white;
+            cursor: pointer;
+        }
+    }
 }
 
-.login-buttons button {
-    font-family: 'Anton', sans-serif;
-    height: 50px;
-    width: 150px;
-    background-color: #1d7e9c;
-    padding-top: 5px;
-    padding-left: 6px;
-    font-size: 20px;
-    margin-left: 10px;
-}
-
-.login-buttons button:hover {
-    background-color: white;
-    cursor: pointer;
-}
-
-.register-inputs {
-    width: 250px;
-    height: 30px;
-    margin-top: 10px;
-}
-                    
-.register-buttons {
-    display: flex;
-    position: relative;
-    width: 200px;
-    top: 110px;
-    margin-left: 10px;
-}
-
-.register-buttons button {
-    font-family: 'Anton', sans-serif;
-    height: 50px;
-    width: 150px;
-    background-color: #1d7e9c;
-    padding-top: 5px;
-    padding-left: 6px;
-    font-size: 20px;
-    margin-left: 10px;
-}
-
-.register-buttons button:hover {
-    background-color: white;
-    cursor: pointer;
-}
 
 @media (max-width: 768px) {
     #logo {
-        position: relative;
-        top: 30vh;
-        height: 150px;
-        width: 250px;
+        width: 500px;
+        height: 500px;
     }
 
-    .second-title {
-        position: absolute;
-        top: 45vh;
-        font-size: 20px;
-        margin-left: 55vw;
-    }
+    .login {
+        width: 100%;
 
-    .login-inputs {
-        width: 150px;
-    }
-
-    .login-buttons button{
-        position: relative;
-        left: -3vw;
-        width: 65px;
-        height: 30px;
-        font-size: 15px;
-    }
-
-    .register-inputs {
-        width: 150px;
-    }
-
-    .register-buttons button {
-        position: relative;
-        left: -2vw;
-        width: 65px;
-        height: 30px;
-        font-size: 15px;
+        .login-inputs {
+            width: 100%;
+            height: 100%;
+            margin-top: 45px;
+    
+            input {
+                width: 50%;
+                height: 75px;
+            }
+        }
+        .login-buttons {
+            width: 45%;
+        }
     }
 }
+
+
+    
