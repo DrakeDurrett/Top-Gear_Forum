@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import { connect } from 'react-redux';
 import {userInfoToRedux} from '../../redux/userReducer';
-import './auth.css'
+import './Auth.scss'
 
 class Auth extends Component {
     constructor(){
@@ -57,13 +57,13 @@ class Auth extends Component {
     render(){
         const { newUser } = this.state;
         return (
-        <div className="auth-page">
+        <div>
             <div className="logo">
-            <img id="logo" src="https://occ-0-2794-2219.1.nflxso.net/dnm/api/v6/LmEnxtiAuzezXBjYXPuDgfZ4zZQ/AAAABTrTb2xjegtH7RDzb2RyX1HHXRmj-5tzQAcAlca0iMod-NfciRXLPEr5xqGhLmNtOTIX8LHWO3Ln8gagUUUtcvQb42Qa5ygwu4VA.png?r=172" alt="Top-gear" />
-            <h1 className='second-title'>FAN FORUM</h1>
+            <img src="/topgear.logo.jpg" alt="Top-gear" />
+            <h1>FAN FORUM</h1>
             </div>
             {newUser === true ? (
-                <div className="auth">
+                <div className="register">
                 <div className="register-inputs">
                     <input className="register-inputs" type="text" placeholder="Email" name="email" value={this.state.email} onChange={e => this.handleInput(e)} />
                     <input className="register-inputs" type="text" placeholder="Username" name="username" value={this.state.username} onChange={(e) => this.handleInput(e)}/>
@@ -76,10 +76,10 @@ class Auth extends Component {
                     
             </div>)
         : (
-            <div className="auth">
+            <div className="login">
                 <div className="login-inputs">
-                    <input className="login-inputs" type="text" placeholder="Username" name="username" value={this.state.username} onChange={e => this.handleInput(e)}/>
-                    <input className="login-inputs" type="password" placeholder="Password" name="password" value={this.state.password} onChange={e => this.handleInput(e)}/>
+                    <input type="text" placeholder="Username" name="username" value={this.state.username} onChange={e => this.handleInput(e)}/>
+                    <input type="password" placeholder="Password" name="password" value={this.state.password} onChange={e => this.handleInput(e)}/>
                 </div>
                 <div className='login-buttons'>
                     <button onClick={() => this.login()}>Login</button>

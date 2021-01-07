@@ -27,6 +27,7 @@
     "react-scripts": "3.4.3",
     "react-spinners": "^0.9.0",
     "redux": "^4.0.5",
+    "sass": "^1.26.12",
     "yarn": "^1.22.5"
   },
   "scripts": {

@@ -5,7 +5,7 @@ module.exports = {
         const db = req.app.get('db');
         const { email, username, password } = req.body;
         const existingUser = await db.get_user([username]);
-        if(existingUser[0]){
+        if(existingUser[0]) {
             return res.status(401).send('Username already exists!')
         }
         const salt = bcrypt.genSaltSync(10);

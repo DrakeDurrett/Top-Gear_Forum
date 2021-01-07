@@ -4,38 +4,59 @@ body {
     background-image: -webkit-radial-gradient(circle, white, black);
 }
 
-.auth {
-position: absolute;
-width: 250px;
-height: 200px;
-left: 43vw;
-top: 45vh;
-padding-top: 50px;
-display: flex;
-flex-direction: column;
-}
-
 .logo{
     margin: 0 auto;
-    height: 50%;
-    width: 50%;
+    margin-top: 7%;
+    text-align: center;
  
     img {
-        height: 50%;
-        width: 300px;
+        height: 30%;
+        width: 40%;
+    }
+
+    h1 {
+        width: 50%;
+        position: relative;
+        left: 33%;
+        top: -50px;
+        font-family: 'Anton', sans-serif;
+        font-size: 50px;
+        font-weight: 900;
+        color: black;
     }
 }
 
-.second-title {
-    position: relative;
-    top: 15vh;
-    margin-left: 50vw;
-    font-family: 'Anton', sans-serif;
-    font-size: 50px;
-    font-weight: 900;
-    color: black;
-}
+.login {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
 
+    .login-inputs {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        // height: 100%;
+        margin-top: 30px;
+
+        input {
+            margin-top: 15px;
+            height: 70px;
+            width: 350px;
+        }
+    }
+
+    .login-buttons {
+        margin: 0 auto;
+        width: 100%;
+
+        button {
+            text-align: center;
+            width: 200px;
+            height: 100px;
+        }
+    }
+}
 
 .login-inputs {
     width: 250px;
