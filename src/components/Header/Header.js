@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import logo from './topgearlogo.jpg';
-import './Header.css';
+import './Header.scss';
 import axios from 'axios';
 
 
@@ -21,7 +21,7 @@ class Header extends Component {
                 <Link to='/dashboard'><img src={logo} alt="top-gear"/> </Link>
             </div>
             <div className='header-nav'>
-                <Link to='/' onClick={() => this.logout()} className='header-nav'>Logout</Link>
+                <Link to='/' onClick={() => this.logout()} className='header-nav'>LOGOUT</Link>
             </div>
         </div>
     }

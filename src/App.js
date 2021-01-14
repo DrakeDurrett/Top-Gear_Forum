@@ -4,7 +4,7 @@ import Nav from './components/Nav/Nav';
 import routes from './routes';
 import { withRouter } from 'react-router-dom';
 import './reset.css';
-import './App.css';
+import './App.scss';
 
 class App extends Component {
   render(){

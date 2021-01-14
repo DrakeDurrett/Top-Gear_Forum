@@ -15,6 +15,7 @@
     .forum-header {
         text-align: center;
         font-size: 25px;
+        margin-bottom: 45px;
         color: white;
     }
 
@@ -33,6 +34,7 @@
         margin-bottom: 25px;
         padding: 0px 25px;
         border-radius: 5%;
+        box-shadow: 3px 3px #1d7e9c;
 
         .title-box {
             border-bottom: 5px black solid;
@@ -56,7 +58,7 @@
             max-width: 500px;
             max-height: 400px;
             margin: 0 auto;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             }
     }
 }

@@ -57,6 +57,6 @@
 }
 
 .open-menu:hover {
-    background-color: white;
     cursor: pointer;
+    transform: scale(2.0);
 }

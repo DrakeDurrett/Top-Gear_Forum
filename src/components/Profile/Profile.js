@@ -1,21 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import axios from 'axios';
-import './Profile.css';
+import './Profile.scss';
 
 const Profile = (props) => {
 
     const [usersPosts, setUsersPosts] = useState([]);
-    const [editing, setEditing] = useState(false);
+    const [editing, setEditing] = useState(0);
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');
 
     useEffect(() => {
         getUsersPosts()
+        console.log(usersPosts)
     });
 
-    const toggleEdit = () => {
-        setEditing(!editing)
+    const toggleEdit = (post_id) => {
+        setEditing(post_id)
     };
 
     const getUsersPosts = () => {
@@ -28,7 +29,8 @@ const Profile = (props) => {
     const editPost = (post_id) => {
         axios.put(`/api/editPost/${post_id}`, {title, content}).then(res => {
             getUsersPosts()
-            toggleEdit();
+            toggleEdit()
+            console.log(post_id)
         }).catch(err => console.log(err))
     };
 
@@ -39,49 +41,50 @@ const Profile = (props) => {
     };
 
 
-    const mappedUsersPosts = usersPosts.map((posts) => {
-            return <div className="profile-post-box" key={posts.post_id}>
-                        {!editing ? (
-                            <span className="profile-post-title">            
-                                <h1>{posts.title}</h1>
-                                <h4>Published by: {posts.username}</h4>
+    const mappedUsersPosts = usersPosts.map((post, index) => {
+            return <div className="profile-post-box" key={post.post_id}>
+                        {editing !== post.post_id ? (
+                            <span>
+                            <div className="profile-btns">
+                            <button id="delete-btn" onClick={() => deletePost(post.post_id)}> Delete </button>
+                            <button id="edit-btn" onClick={() => toggleEdit(post.post_id)}> Edit Post </button>
+                            </div> 
+                            <section className="profile-post-title">
+                                <h1>{post.title}</h1>
+                                <h4>Published by: {post.username}</h4>
+                            </section>           
                             <section className="profile-post-content">
-                                <p>{posts.content}</p>
-                                <img className="post-img" src={posts.img_url} alt="" />
+                                <img className="post-img" src={post.img_url} alt="" />
+                                <p>{post.content}</p>
                             </section>
-                            <div className="profile-buttons">
-                                <button id="delete-btn" onClick={() => deletePost(posts.post_id)}> X </button>
-                                <button id="edit-btn" onClick={() => toggleEdit()}> Edit Post </button>
-                            </div>
+                            
                             </span>
                         ) : (
-                            <span className="profile-post-title">
-                                <h1>{posts.title}</h1>
-                                <h4>Published by: {posts.username}</h4>
-                            <section className="profile-post-content">
-                                <p>{posts.content}</p>
-                                <img className="post-img" src={posts.img} alt="" />
-                            </section>
-                            <div className="profile-buttons">
-                                <button id="delete-btn" onClick={() => this.deletePost(posts.post_id)}> X </button>
-                            </div>
-                            <div className="edit-inputs">
-                                <input className="edit-title" type="text" placeholder="Edit Title Here...." name="title" value={title} onChange={(e) => setTitle(e.target.value)}/>
-                                <textarea className="edit-content" type="text"  name="content" placeholder="Edit Post Here...." value={content} onChange={(e) => setContent(e.target.value)}/>
-                            </div>
-                            <div className="submit-edit-btns">
-                                <button className="cancel-edit" onClick={() => toggleEdit()}> Cancel </button>
-                                <button className="submit-edit" onClick={() => editPost(posts.post_id)}> Submit Post </button>
-                            </div>
+                            <span className="edit-post-box">
+                                <div className="submit-edit-btns">
+                                    <button id="cancel-edit" onClick={() => toggleEdit()}> Cancel </button>
+                                    <button id="submit-edit" onClick={() => editPost(post.post_id)}> Submit Post </button>
+                                </div>
+                                <span className="edit-post-title">
+                                    <h1>{post.title}</h1>
+                                    <img className="post-img" src={post.img} alt="" />
+                                    <p>{post.content}</p>
+                                </span>
+                                <div className="edit-inputs">
+                                    <input className="edit-title" type="text" placeholder="Edit Title Here...." name="title" value={title} onChange={(e) => setTitle(e.target.value)}/>
+                                    <textarea className="edit-content" type="text"  name="content" placeholder="Edit Post Here...." value={content} onChange={(e) => setContent(e.target.value)}/>
+                                </div>
                             </span>
                         )}
                         
                 </div>
             })
 
-        return <div className="profile-post">
+        return <div className="profile">
                 <h2>MY POSTS</h2>
-                {mappedUsersPosts}
+                <div className="profile-post">
+                    {mappedUsersPosts}
+                </div>
             </div>
 
 };

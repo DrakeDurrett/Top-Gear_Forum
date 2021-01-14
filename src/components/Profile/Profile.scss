@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+.profile {
+    width: 100%;
+
+    h2 {
+        color: white;
+        text-align: center;
+        font-size: 50px;
+        font-weight: bolder;
+        text-decoration: underline;
+        margin-bottom: 60px;
+    }
+
+    .profile-post {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .profile-post-box {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        height: 650px;
+        background-color: white;
+        margin-bottom: 25px;
+        padding: 0 25px;
+        border-radius: 5%;
+        box-shadow: 3px 3px #1d7e9c;
+
+        .profile-btns {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+
+            button {
+                font-family: 'Anton', sans-serif;
+                background-color: grey;
+                color: white;
+                height: 40px;
+            }
+
+            #edit-btn:hover {
+                background-color: #1d7e9c;
+                cursor: pointer;
+            }
+
+            #delete-btn:hover {
+                background-color: rgb(163, 47, 47);
+                cursor: pointer;
+            }
+        }
+
+        .profile-post-title {
+            border-bottom: 5px black solid;
+            width: 100%;
+            margin-bottom: 40px;
+            margin-top: -15px;
+
+                h1 {
+                    font-family: 'Anton', sans-serif;
+                    text-decoration: underline;
+                    font-size: 30px;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                }
+
+                h4 {
+                    margin-bottom: 15px;
+                }
+
+                button {
+                    position: relative;
+                    left: 250px;
+                    top: 15px;
+                    background-color: #1d7e9c;
+                    font-weight: bolder;
+                    height: 30px;
+                    width: 30px;
+                }
+        }
+
+        img {
+            max-width: 500px;
+            max-height: 450px;
+            margin-bottom: 30px;
+        }
+
+        p {
+            font-size: 25px;
+        }
+    }
+
+    .edit-post-box {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        .submit-edit-btns {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+            margin-bottom: 20px;
+    
+            button {
+                font-family: 'Anton', sans-serif;
+                background-color: grey;
+                color: white;
+                height: 40px;
+            }
+    
+            button {
+            font-family: 'Anton', sans-serif;
+                background-color: grey;
+                color: white;
+                height: 40px;
+            }
+    
+            #submit-edit:hover {
+                background-color: #1d7e9c;
+                cursor: pointer;
+            }
+    
+            #cancel-edit:hover {
+                cursor: pointer;
+            }
+        }
+
+        .edit-post-title {
+            margin-top: 50px;
+        }
+
+        .edit-inputs {
+            display: flex;
+            flex-direction: column;
+            margin-top: 30px;
+
+            textarea {
+                max-width: 100%;
+                max-height: 70%;
+                margin-top: 15px;
+            }
+        }
+    }
+}
+   

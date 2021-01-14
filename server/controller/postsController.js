@@ -19,8 +19,8 @@ module.exports = {
     },
     editPost: async (req, res) => {
         const db = req.app.get('db');
-        const { post_id } = req.params;
         const { title, content } = req.body;
+        const { post_id } = req.params;
         const post = await db.edit_post(title, content, post_id);
         console.log(post)
         res.status(200).send(post);
